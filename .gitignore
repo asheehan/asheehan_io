@@ -1,0 +1,8 @@
+.idea/
+erl_crash.dump
+*.iml
+
+/deps
+/cover/
+/priv/static/
+/assets/node_modules/
