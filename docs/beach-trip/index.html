@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Beach Trip — Full Breakdown</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-text-size-adjust:100%;}
+  :root{
+    --sand:#f4efe7; --ink:#1e2a2a; --muted:#63726f; --teal:#0d6e6e; --teal-dk:#0a5350;
+    --coral:#d9663f; --green:#127a4f; --gold:#c1912f; --plum:#8a5a8f; --line:#e6dfd2; --card:#fff;
+  }
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    background:var(--sand);color:var(--ink);line-height:1.5;
+    padding:0 13px calc(30px + env(safe-area-inset-bottom));}
+  .wrap{max-width:470px;margin:0 auto;}
+
+  header{padding:24px 20px 20px;margin:12px -13px 0;
+    background:linear-gradient(150deg,#0d6e6e,#0a5350 70%,#083f3d);color:#fff;
+    border-radius:0 0 20px 20px;position:relative;overflow:hidden;}
+  header:after{content:"🏝️";position:absolute;right:15px;top:13px;font-size:38px;opacity:.28;}
+  header .kick{font-size:11.5px;letter-spacing:1.4px;text-transform:uppercase;opacity:.82;font-weight:600;}
+  header h1{font-size:22px;line-height:1.2;margin:5px 0 7px;letter-spacing:-.3px;}
+  header p{font-size:13px;opacity:.92;max-width:350px;}
+  .live{display:inline-flex;align-items:center;gap:5px;background:rgba(255,255,255,.16);
+    border:1px solid rgba(255,255,255,.25);padding:4px 10px;border-radius:999px;font-size:11.5px;margin-top:12px;}
+  .dot{width:7px;height:7px;border-radius:50%;background:#7ee0b0;animation:pulse 2s infinite;}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(126,224,176,.6)}70%{box-shadow:0 0 0 7px rgba(126,224,176,0)}100%{box-shadow:0 0 0 0 rgba(126,224,176,0)}}
+
+  h2{font-size:13px;margin:24px 4px 11px;letter-spacing:.6px;color:var(--teal-dk);text-transform:uppercase;font-weight:800;}
+  h2 span{color:var(--muted);font-weight:600;text-transform:none;letter-spacing:0;}
+
+  .flights{background:var(--card);border:1px solid var(--line);border-radius:15px;
+    padding:14px 14px 12px;box-shadow:0 2px 10px rgba(30,42,42,.05);}
+  .flights .cap{font-size:12px;color:var(--muted);margin-bottom:10px;}
+  table{width:100%;border-collapse:collapse;font-size:14px;}
+  th,td{padding:9px 5px;text-align:center;}
+  th{font-size:10.5px;text-transform:uppercase;letter-spacing:.4px;color:var(--muted);font-weight:800;
+     border-bottom:2px solid var(--line);}
+  th.rt{text-align:left;}
+  td{border-bottom:1px solid var(--line);}
+  tr:last-child td{border-bottom:none;}
+  td.route{text-align:left;font-weight:700;color:var(--teal-dk);font-size:13px;}
+  td.route small{display:block;font-weight:400;color:var(--muted);font-size:10.5px;}
+  .fare{font-weight:700;}
+  .fare.hot{color:var(--coral);}
+  .fare.low{color:var(--green);}
+  .flnote{font-size:11.5px;color:#41504e;margin-top:10px;line-height:1.5;background:#f6f2ea;padding:8px 10px;border-radius:8px;}
+  .flnote b{color:var(--coral);}
+
+  .base{background:linear-gradient(150deg,#3a2e33,#2a2226);color:#f4efe7;border-radius:16px;
+    padding:17px 16px 15px;position:relative;box-shadow:0 3px 14px rgba(30,42,42,.15);}
+  .base .btag{display:inline-block;font-size:10.5px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;
+    background:var(--gold);color:#2a2226;padding:3px 9px;border-radius:999px;margin-bottom:9px;}
+  .base h3{font-size:18px;margin-bottom:2px;}
+  .base h3 a{color:#fff;text-decoration:none;border-bottom:1.5px solid rgba(255,255,255,.4);}
+  .base .sub{font-size:12px;color:#c9bfb3;margin-bottom:12px;}
+  .base .bignum{font-size:25px;font-weight:800;letter-spacing:-.5px;color:#f0c674;}
+  .base .bignum small{font-size:12px;font-weight:500;color:#c9bfb3;letter-spacing:0;}
+  .base .traits{display:flex;flex-wrap:wrap;gap:6px;margin-top:11px;}
+  .base .t{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);
+    padding:3px 9px;border-radius:999px;font-size:11px;}
+
+  .card{background:var(--card);border:1px solid var(--line);border-radius:15px;
+    padding:14px 15px 13px;margin-bottom:12px;box-shadow:0 2px 10px rgba(30,42,42,.05);position:relative;}
+  .rank{position:absolute;top:-9px;left:13px;font-size:10px;font-weight:800;letter-spacing:.5px;
+    text-transform:uppercase;color:#fff;padding:3px 9px;border-radius:999px;}
+  .rank.v{background:var(--green);} .rank.a{background:var(--teal);} .rank.b{background:var(--gold);} .rank.c{background:var(--plum);}
+  .top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-top:5px;}
+  .top .name{font-size:16.5px;font-weight:700;line-height:1.2;}
+  .top .name a{color:var(--ink);text-decoration:none;border-bottom:2px solid var(--teal);}
+  .top .loc{font-size:11.5px;color:var(--muted);margin-top:3px;}
+  .top .price{text-align:right;flex-shrink:0;}
+  .top .price .n{font-size:21px;font-weight:800;letter-spacing:-.4px;color:var(--teal-dk);}
+  .top .price .w{font-size:10.5px;color:var(--muted);}
+  .save{display:inline-block;font-size:11px;font-weight:700;color:var(--green);
+    background:#e8f5ec;padding:2px 8px;border-radius:6px;margin-top:8px;}
+
+  .breakdown{display:flex;gap:6px;margin-top:11px;}
+  .bd{flex:1;background:#f6f2ea;border-radius:8px;padding:7px 5px;text-align:center;}
+  .bd .l{font-size:9.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.3px;font-weight:700;}
+  .bd .n{font-size:14px;font-weight:700;margin-top:2px;}
+
+  .strip{display:flex;gap:6px;margin-top:9px;}
+  .cell{flex:1;text-align:center;background:#f6f2ea;border-radius:8px;padding:6px 3px;}
+  .cell .m{font-size:9.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.3px;font-weight:700;}
+  .cell .p{font-size:13px;font-weight:700;margin-top:2px;}
+  .cell.best{background:#e8f5ec;} .cell.best .p{color:var(--green);}
+
+  .traits2{display:flex;flex-wrap:wrap;gap:5px;margin-top:11px;}
+  .traits2 .t{font-size:11px;padding:2px 8px;border-radius:999px;background:#eef4f3;color:var(--teal-dk);}
+  .traits2 .t.warn{background:#fbeee7;color:#9c4622;}
+  .note{font-size:12.5px;color:#41504e;margin-top:10px;line-height:1.5;}
+  .note b{color:var(--coral);}
+
+  .splurge .top .price .n{color:var(--coral);}
+
+  .verdict{background:var(--ink);color:#f4efe7;border-radius:16px;padding:18px 16px;margin-top:8px;}
+  .verdict h3{font-size:15px;margin-bottom:10px;color:#8fe0c4;}
+  .verdict p{font-size:13.5px;line-height:1.55;margin-bottom:10px;color:#e7e0d4;}
+  .verdict p:last-child{margin-bottom:0;}
+  .verdict b{color:#fff;}
+  footer{text-align:center;font-size:10.5px;color:var(--muted);margin:20px 6px 0;line-height:1.6;}
+  a{color:var(--teal-dk);}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="kick">Every option · priced against Montage</div>
+    <h1>Warm Beach Trip<br>Full Breakdown</h1>
+    <p>2 adults + Riley (6) · 5 nights · nonstop from O'Hare. Trip = hotel (5 nts, taxes in) + flights ×3.</p>
+    <span class="live"><span class="dot"></span>All prices live · Nov / March / Christmas</span>
+  </header>
+
+  <!-- FLIGHTS -->
+  <h2>Nonstop flights ✈️ <span>— from O'Hare, round-trip / person</span></h2>
+  <div class="flights">
+    <div class="cap">Cheapest nonstop economy fare, per person (all live). Riley needs a seat → multiply ×3.</div>
+    <table>
+      <tr><th class="rt">Route</th><th>Nov 20</th><th>Mar 22</th><th>Dec 21</th></tr>
+      <tr>
+        <td class="route">Cabo <small>SJD · 4h45</small></td>
+        <td class="fare low">$746</td>
+        <td class="fare hot">$1,261</td>
+        <td class="fare">$836</td>
+      </tr>
+      <tr>
+        <td class="route">Puerto Vallarta <small>PVR · 4h40</small></td>
+        <td class="fare">$899</td>
+        <td class="fare low">$811</td>
+        <td class="fare">$889</td>
+      </tr>
+      <tr>
+        <td class="route">Cancún <small>CUN · 4h05</small></td>
+        <td class="fare low">$800</td>
+        <td class="fare hot">$1,355</td>
+        <td class="fare">$875</td>
+      </tr>
+    </table>
+    <div class="flnote">⚠️ <b>Spring break (Mar 22) spikes flights to Cabo &amp; Cancún</b> — they're the peak spring-break spots. <b>Puerto Vallarta stays cheap in March</b> ($811), which makes it the value pick that week. November fares are the most even across the board.</div>
+  </div>
+
+  <h2>The benchmark <span>— the one you loved</span></h2>
+  <div class="card splurge">
+    <span class="rank" style="background:var(--gold);color:#2a2226;">★ Your base</span>
+    <div class="top">
+      <div><div class="name"><a href="https://www.montage.com/loscabos/" target="_blank">Montage Los Cabos</a></div><div class="loc">Cabo (SJD) · swimmable Santa María Bay</div></div>
+      <div class="price"><div class="n">~$9,040</div><div class="w">trip · Nov</div></div>
+    </div>
+    <div class="breakdown">
+      <div class="bd"><div class="l">🏨 Hotel (Nov)</div><div class="n">$6,798</div></div>
+      <div class="bd"><div class="l">✈️ Flights ×3</div><div class="n">$2,238</div></div>
+    </div>
+    <div class="strip">
+      <div class="cell best"><div class="m">Nov trip</div><div class="p">$9,040</div></div>
+      <div class="cell"><div class="m">Mar trip</div><div class="p">$9,830</div></div>
+      <div class="cell"><div class="m">Xmas</div><div class="p">Sold out</div></div>
+    </div>
+    <div class="traits2"><span class="t">Nonstop ✓</span><span class="t">Swimmable Santa María ✓</span><span class="t">The one you loved</span></div>
+    <div class="note">Your gold standard — and the room <i>is</i> the spend. Cheapest rooms run <b>$1,043–1,172/night</b>. Even here <b>November beats March</b>: the March room is a touch cheaper, but spring-break flights ($1,261/pp) push that trip higher. Christmas week (Dec 21–26) is showing sold out. Everything below is measured against this.</div>
+  </div>
+
+  <h2>Under budget &amp; nonstop <span>— the real contenders</span></h2>
+
+  <!-- Corazon -->
+  <div class="card">
+    <span class="rank v">Best value</span>
+    <div class="top">
+      <div><div class="name"><a href="https://www.corazoncabo.com/" target="_blank">Corazón Cabo</a></div><div class="loc">Cabo (SJD) · Médano Beach</div></div>
+      <div class="price"><div class="n">~$3,500</div><div class="w">trip · Nov</div></div>
+    </div>
+    <span class="save">saves ~$5,600 vs Montage</span>
+    <div class="breakdown">
+      <div class="bd"><div class="l">🏨 Hotel (Nov)</div><div class="n">$1,235</div></div>
+      <div class="bd"><div class="l">✈️ Flights ×3</div><div class="n">$2,238</div></div>
+    </div>
+    <div class="strip">
+      <div class="cell best"><div class="m">Nov trip</div><div class="p">$3,473</div></div>
+      <div class="cell"><div class="m">Mar trip</div><div class="p">$5,134</div></div>
+      <div class="cell"><div class="m">Xmas hotel</div><div class="p">$1,909</div></div>
+    </div>
+    <div class="traits2"><span class="t">Nonstop ✓</span><span class="t">Swimmable Médano ✓</span><span class="t">Walkable marina</span></div>
+    <div class="note">Same swimmable Cabo bay as Montage at a fraction of the price. November wins — March flights to Cabo jump to $1,261/pp.</div>
+  </div>
+
+  <!-- Conrad -->
+  <div class="card">
+    <span class="rank a">Closest to Montage</span>
+    <div class="top">
+      <div><div class="name"><a href="https://www.conradpuntademita.com/" target="_blank">Conrad Punta de Mita</a></div><div class="loc">Puerto Vallarta (PVR) · Riviera Nayarit</div></div>
+      <div class="price"><div class="n">~$4,550</div><div class="w">trip · March</div></div>
+    </div>
+    <span class="save">saves ~$5,350 vs Montage</span>
+    <div class="breakdown">
+      <div class="bd"><div class="l">🏨 Hotel (Mar)</div><div class="n">$2,100</div></div>
+      <div class="bd"><div class="l">✈️ Flights ×3</div><div class="n">$2,433</div></div>
+    </div>
+    <div class="strip">
+      <div class="cell"><div class="m">Nov trip</div><div class="p">$5,469</div></div>
+      <div class="cell best"><div class="m">Mar trip</div><div class="p">$4,533</div></div>
+      <div class="cell"><div class="m">Xmas hotel</div><div class="p">$5,400</div></div>
+    </div>
+    <div class="traits2"><span class="t">Nonstop ✓</span><span class="t">Swimmable cove ✓</span><span class="t">Design-forward + kids club</span></div>
+    <div class="note">Closest to the Montage feel in budget — and the only contender that's <b>cheaper in March</b>: PV keeps low spring-break flights ($811) AND a lower room rate.</div>
+  </div>
+
+  <!-- Fairmont -->
+  <div class="card">
+    <span class="rank b">Family value</span>
+    <div class="top">
+      <div><div class="name"><a href="https://www.fairmont.com/en/hotels/riviera-maya/fairmont-mayakoba.html" target="_blank">Fairmont Mayakoba</a></div><div class="loc">Cancún (CUN) · Riviera Maya</div></div>
+      <div class="price"><div class="n">~$4,050</div><div class="w">trip · Nov</div></div>
+    </div>
+    <span class="save">saves ~$5,000 vs Montage</span>
+    <div class="breakdown">
+      <div class="bd"><div class="l">🏨 Hotel (Nov)</div><div class="n">$1,653</div></div>
+      <div class="bd"><div class="l">✈️ Flights ×3</div><div class="n">$2,400</div></div>
+    </div>
+    <div class="strip">
+      <div class="cell best"><div class="m">Nov trip</div><div class="p">$4,053</div></div>
+      <div class="cell"><div class="m">Mar trip</div><div class="p">$7,191</div></div>
+      <div class="cell"><div class="m">Xmas hotel</div><div class="p">$5,070</div></div>
+    </div>
+    <div class="traits2"><span class="t">Nonstop ✓</span><span class="t">Swimmable ✓</span><span class="t">Family pool + water slide</span></div>
+    <div class="note">Lagoon resort with a kids' water slide, near Playa's 5th-Ave dining. <b>Book November</b> — March's spring-break Cancún flights ($1,355/pp) nearly double the trip.</div>
+  </div>
+
+  <!-- Nizuc -->
+  <div class="card">
+    <span class="rank c">Refined pick</span>
+    <div class="top">
+      <div><div class="name"><a href="https://www.nizuc.com/" target="_blank">Nizuc Resort &amp; Spa</a></div><div class="loc">Cancún (CUN) · quiet south tip</div></div>
+      <div class="price"><div class="n">~$5,560</div><div class="w">trip · Nov</div></div>
+    </div>
+    <span class="save">saves ~$3,500 vs Montage</span>
+    <div class="breakdown">
+      <div class="bd"><div class="l">🏨 Hotel (Nov)</div><div class="n">$3,161</div></div>
+      <div class="bd"><div class="l">✈️ Flights ×3</div><div class="n">$2,400</div></div>
+    </div>
+    <div class="strip">
+      <div class="cell best"><div class="m">Nov trip</div><div class="p">$5,561</div></div>
+      <div class="cell"><div class="m">Mar trip</div><div class="p">$6,791</div></div>
+      <div class="cell"><div class="m">Xmas hotel</div><div class="p">$6,660</div></div>
+    </div>
+    <div class="traits2"><span class="t">Nonstop ✓</span><span class="t">Calm swimmable beach ✓</span><span class="t">Sleek, couples-leaning</span></div>
+    <div class="note">The design-y, refined pick (your wife liked the look), short 15-min transfer. Its March room is cheaper, but <b>spring-break Cancún flights make November the better-value trip</b>.</div>
+  </div>
+
+  <h2 style="color:var(--coral);">Splurge tier <span>— Christmas pricing, over budget</span></h2>
+  <div class="splurge">
+    <div class="card">
+      <div class="top"><div><div class="name"><a href="https://www.oneandonlyresorts.com/palmilla" target="_blank">One&amp;Only Palmilla</a></div><div class="loc">Cabo (SJD) · swimmable cove</div></div><div class="price"><div class="n">$14,705</div><div class="w">hotel · Xmas</div></div></div>
+      <div class="note" style="color:#41504e;">Montage-caliber (or beyond). The dream splurge — ~2× your whole budget on the room alone.</div>
+    </div>
+    <div class="card">
+      <div class="top"><div><div class="name"><a href="https://www.hyatt.com/en-US/hotel/dominican-republic/hyatt-ziva-cap-cana/pujzc" target="_blank">Hyatt Ziva Cap Cana</a></div><div class="loc">Punta Cana (PUJ) · all-inclusive</div></div><div class="price"><div class="n">$13,724</div><div class="w">hotel · Xmas</div></div></div>
+      <div class="note" style="color:#41504e;">All meals + waterpark included — but Christmas peak crushes it. Much cheaper off-season if you want it priced.</div>
+    </div>
+    <div class="card">
+      <div class="top"><div><div class="name"><a href="https://www.seafireresortandspa.com/" target="_blank">Kimpton Seafire</a></div><div class="loc">Grand Cayman (GCM) · Seven Mile</div></div><div class="price"><div class="n">$12,194</div><div class="w">hotel · Xmas</div></div></div>
+      <div class="note" style="color:#41504e;">Design-forward + family on a stunning beach. Cayman + Christmas = very pricey.</div>
+    </div>
+    <div class="card">
+      <div class="top"><div><div class="name"><a href="https://www.ritzcarlton.com/en/hotels/auart-the-ritz-carlton-aruba/overview/" target="_blank">Ritz-Carlton Aruba</a></div><div class="loc">Aruba (AUA) · Palm Beach</div></div><div class="price"><div class="n">$9,799</div><div class="w">hotel · Xmas</div></div></div>
+      <div class="note" style="color:#41504e;">Most reliable winter sun (out of the hurricane belt). Off-peak it drops toward budget.</div>
+    </div>
+  </div>
+
+  <h2>Ruled out <span>— for the record</span></h2>
+  <div class="card">
+    <div class="traits2" style="margin-top:2px;">
+      <span class="t warn">Andaz Costa Rica — airfare too high, no easy nonstop</span>
+      <span class="t warn">Conrad Tulum — long transfer, not really Tulum</span>
+      <span class="t warn">ME Cabo &amp; Alila Mayakoba — adults-only</span>
+      <span class="t warn">La Paz — no nonstop (9–25h)</span>
+      <span class="t warn">Canary Islands — no nonstop from ORD</span>
+    </div>
+  </div>
+
+  <h2>Where it lands</h2>
+  <div class="verdict">
+    <h3>The honest read</h3>
+    <p>Every contender is nonstop, swimmable and family-friendly — and saves <b>~$3,500–5,600 vs Montage</b> (live Montage Nov ~$9,040).</p>
+    <p><b>Cheapest:</b> Corazón Cabo, Nov — <b>~$3,500</b>. Same swimmable Cabo bay, tiny price.</p>
+    <p><b>Closest to Montage vibe:</b> Conrad Punta de Mita, March — <b>~$4,550</b> (and PV dodges the spring-break flight spike).</p>
+    <p><b>New flight insight:</b> for Cancún &amp; Cabo, <b>November beats March</b> once you count airfare — spring break jacks those fares up ~$500/person. Only Puerto Vallarta stays cheap in March.</p>
+    <p style="color:#8fe0c4;margin-top:12px;">Point me at your top 1–2 and I'll lock exact bookable flights + room for your dates.</p>
+  </div>
+
+  <footer>
+    Live prices Jul 2026 (Kayak / Google Hotels; Nizuc Nov room = direct quote). Hotel = cheapest available room, 5 nights incl. taxes &amp; fees. Flights = cheapest nonstop economy, round-trip/person ×3 (all live). Montage room rate varies widely by rate type. Fares move daily.
+  </footer>
+
+</div>
+</body>
+</html>
