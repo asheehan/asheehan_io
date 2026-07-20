@@ -34,8 +34,8 @@
     padding:14px 14px 12px;box-shadow:0 2px 10px rgba(30,42,42,.05);}
   .flights .cap{font-size:12px;color:var(--muted);margin-bottom:10px;}
   table{width:100%;border-collapse:collapse;font-size:14px;}
-  th,td{padding:9px 5px;text-align:center;}
-  th{font-size:10.5px;text-transform:uppercase;letter-spacing:.4px;color:var(--muted);font-weight:800;
+  th,td{padding:9px 4px;text-align:center;}
+  th{font-size:10px;text-transform:uppercase;letter-spacing:.3px;color:var(--muted);font-weight:800;
      border-bottom:2px solid var(--line);}
   th.rt{text-align:left;}
   td{border-bottom:1px solid var(--line);}
@@ -47,19 +47,7 @@
   .fare.low{color:var(--green);}
   .flnote{font-size:11.5px;color:#41504e;margin-top:10px;line-height:1.5;background:#f6f2ea;padding:8px 10px;border-radius:8px;}
   .flnote b{color:var(--coral);}
-
-  .base{background:linear-gradient(150deg,#3a2e33,#2a2226);color:#f4efe7;border-radius:16px;
-    padding:17px 16px 15px;position:relative;box-shadow:0 3px 14px rgba(30,42,42,.15);}
-  .base .btag{display:inline-block;font-size:10.5px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;
-    background:var(--gold);color:#2a2226;padding:3px 9px;border-radius:999px;margin-bottom:9px;}
-  .base h3{font-size:18px;margin-bottom:2px;}
-  .base h3 a{color:#fff;text-decoration:none;border-bottom:1.5px solid rgba(255,255,255,.4);}
-  .base .sub{font-size:12px;color:#c9bfb3;margin-bottom:12px;}
-  .base .bignum{font-size:25px;font-weight:800;letter-spacing:-.5px;color:#f0c674;}
-  .base .bignum small{font-size:12px;font-weight:500;color:#c9bfb3;letter-spacing:0;}
-  .base .traits{display:flex;flex-wrap:wrap;gap:6px;margin-top:11px;}
-  .base .t{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);
-    padding:3px 9px;border-radius:999px;font-size:11px;}
+  .flnote b.g{color:var(--green);}
 
   .card{background:var(--card);border:1px solid var(--line);border-radius:15px;
     padding:14px 15px 13px;margin-bottom:12px;box-shadow:0 2px 10px rgba(30,42,42,.05);position:relative;}
@@ -73,8 +61,6 @@
   .top .price{text-align:right;flex-shrink:0;}
   .top .price .n{font-size:21px;font-weight:800;letter-spacing:-.4px;color:var(--teal-dk);}
   .top .price .w{font-size:10.5px;color:var(--muted);}
-  .save{display:inline-block;font-size:11px;font-weight:700;color:var(--green);
-    background:#e8f5ec;padding:2px 8px;border-radius:6px;margin-top:8px;}
 
   .breakdown{display:flex;gap:6px;margin-top:11px;}
   .bd{flex:1;background:#f6f2ea;border-radius:8px;padding:7px 5px;text-align:center;}
@@ -83,9 +69,9 @@
 
   .strip{display:flex;gap:4px;margin-top:9px;}
   .cell{flex:1;text-align:center;background:#f6f2ea;border-radius:8px;padding:6px 2px;}
-  .cell .m{font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:.2px;font-weight:700;}
+  .cell .m{font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:.2px;font-weight:700;line-height:1.25;}
   .cell .p{font-size:12px;font-weight:700;margin-top:2px;}
-  .cell.best{background:#e8f5ec;} .cell.best .p{color:var(--green);}
+  .cell.best{background:#e8f5ec;} .cell.best .p{color:var(--green);} .cell.best .m{color:var(--green);}
 
   .traits2{display:flex;flex-wrap:wrap;gap:5px;margin-top:11px;}
   .traits2 .t{font-size:11px;padding:2px 8px;border-radius:999px;background:#eef4f3;color:var(--teal-dk);}
@@ -111,7 +97,7 @@
     <div class="kick">Every option · priced against Montage</div>
     <h1>Warm Beach Trip<br>Full Breakdown</h1>
     <p>2 adults + Riley (6) · 5 nights · nonstop from O'Hare. Trip = hotel (5 nts, taxes in) + flights ×3.</p>
-    <span class="live"><span class="dot"></span>All prices live · Nov / March / Dec 21 / Dec 26</span>
+    <span class="live"><span class="dot"></span>All prices live · Nov 20 · Nov 17 · Dec 21 · Dec 26</span>
   </header>
 
   <!-- FLIGHTS -->
@@ -119,30 +105,30 @@
   <div class="flights">
     <div class="cap">Cheapest nonstop economy fare, per person (all live). Riley needs a seat → multiply ×3.</div>
     <table>
-      <tr><th class="rt">Route</th><th>Nov 20</th><th>Mar 22</th><th>Dec 21</th><th>Dec 26</th></tr>
+      <tr><th class="rt">Route</th><th>Nov 20–25</th><th>Nov 17–22</th><th>Dec 21</th><th>Dec 26</th></tr>
       <tr>
         <td class="route">Cabo <small>SJD · 4h45</small></td>
-        <td class="fare low">$746</td>
-        <td class="fare hot">$1,261</td>
+        <td class="fare">$746</td>
+        <td class="fare low">$596</td>
         <td class="fare">$836</td>
         <td class="fare hot">$1,642</td>
       </tr>
       <tr>
         <td class="route">Puerto Vallarta <small>PVR · 4h40</small></td>
         <td class="fare">$899</td>
-        <td class="fare low">$811</td>
+        <td class="fare low">$518</td>
         <td class="fare">$889</td>
         <td class="fare hot">$1,813</td>
       </tr>
       <tr>
         <td class="route">Cancún <small>CUN · 4h05</small></td>
-        <td class="fare low">$800</td>
-        <td class="fare hot">$1,355</td>
+        <td class="fare">$800</td>
+        <td class="fare low">$463</td>
         <td class="fare">$875</td>
         <td class="fare hot">$1,150</td>
       </tr>
     </table>
-    <div class="flnote">⚠️ <b>Spring break (Mar 22) spikes flights to Cabo &amp; Cancún</b> — they're the peak spring-break spots. <b>Puerto Vallarta stays cheap in March</b> ($811). And <b>New Year's week (Dec 26–31) is the priciest of all</b> — nonstops roughly double vs Christmas week ($1,642 Cabo, $1,813 PV; Cancún's $1,150 is Frontier — mainline is ~$2,900). November fares are the most even across the board.</div>
+    <div class="flnote">💡 <b class="g">Shifting the November window a few days earlier (Nov 17–22) is the single biggest saver</b> — earlier-week departures drop O'Hare nonstops sharply: Cabo $746→<b class="g">$596</b>, PV $899→<b class="g">$518</b>, Cancún $800→<b class="g">$463</b>. That's why every card below shows a "Best Nov" cell. Meanwhile <b>New Year's week (Dec 26–31) is the priciest of all</b> — nonstops roughly double vs Christmas ($1,642 Cabo, $1,813 PV; Cancún's $1,150 is Frontier, mainline ~$2,900).</div>
   </div>
 
   <h2>The benchmark <span>— the one you loved</span></h2>
@@ -150,20 +136,20 @@
     <span class="rank" style="background:var(--gold);color:#2a2226;">★ Your base</span>
     <div class="top">
       <div><div class="name"><a href="https://www.montage.com/loscabos/" target="_blank">Montage Los Cabos</a></div><div class="loc">Cabo (SJD) · swimmable Santa María Bay · 🚗 ~35 min</div></div>
-      <div class="price"><div class="n">~$9,040</div><div class="w">trip · Nov</div></div>
+      <div class="price"><div class="n">~$7,090</div><div class="w">trip · Nov 17–22</div></div>
     </div>
     <div class="breakdown">
-      <div class="bd"><div class="l">🏨 Hotel (Nov)</div><div class="n">$6,798</div></div>
-      <div class="bd"><div class="l">✈️ Flights ×3</div><div class="n">$2,238</div></div>
+      <div class="bd"><div class="l">🏨 Hotel (Nov 17)</div><div class="n">$5,301</div></div>
+      <div class="bd"><div class="l">✈️ Flights ×3</div><div class="n">$1,788</div></div>
     </div>
     <div class="strip">
-      <div class="cell best"><div class="m">Nov trip</div><div class="p">$9,040</div></div>
-      <div class="cell"><div class="m">Mar trip</div><div class="p">$9,830</div></div>
+      <div class="cell"><div class="m">Nov 20–25</div><div class="p">$9,040</div></div>
+      <div class="cell best"><div class="m">Best · 17–22</div><div class="p">$7,090</div></div>
       <div class="cell"><div class="m">Xmas</div><div class="p">Sold out</div></div>
       <div class="cell"><div class="m">NYE</div><div class="p">Sold out</div></div>
     </div>
     <div class="traits2"><span class="t">Nonstop ✓</span><span class="t">Swimmable Santa María ✓</span><span class="t">The one you loved</span></div>
-    <div class="note">Your gold standard — and the room <i>is</i> the spend. Cheapest rooms run <b>$1,043–1,172/night</b>. Even here <b>November beats March</b>: the March room is a touch cheaper, but spring-break flights ($1,261/pp) push that trip higher. Christmas week (Dec 21–26) is showing sold out. Everything below is measured against this.</div>
+    <div class="note">Your gold standard — and the room <i>is</i> the spend. <b>Your wife was right:</b> shift up to Nov 17–22 and the room drops to <b>~$914/night</b> (vs $1,172 on Nov 20–25), and the earlier flights fall too — the whole trip lands near <b>~$7,090</b> instead of ~$9,040. Christmas week is showing sold out. Everything below is measured against this.</div>
   </div>
 
   <h2>Under budget &amp; nonstop <span>— the real contenders</span></h2>
@@ -173,20 +159,20 @@
     <span class="rank v">Best value</span>
     <div class="top">
       <div><div class="name"><a href="https://www.corazoncabo.com/" target="_blank">Corazón Cabo</a></div><div class="loc">Cabo (SJD) · Médano Beach · 🚗 ~40 min</div></div>
-      <div class="price"><div class="n">~$3,500</div><div class="w">trip · Nov</div></div>
+      <div class="price"><div class="n">~$3,020</div><div class="w">trip · Nov 17–22</div></div>
     </div>
     <div class="breakdown">
-      <div class="bd"><div class="l">🏨 Hotel (Nov)</div><div class="n">$1,235</div></div>
-      <div class="bd"><div class="l">✈️ Flights ×3</div><div class="n">$2,238</div></div>
+      <div class="bd"><div class="l">🏨 Hotel (Nov 17)</div><div class="n">$1,235</div></div>
+      <div class="bd"><div class="l">✈️ Flights ×3</div><div class="n">$1,788</div></div>
     </div>
     <div class="strip">
-      <div class="cell best"><div class="m">Nov trip</div><div class="p">$3,473</div></div>
-      <div class="cell"><div class="m">Mar trip</div><div class="p">$5,134</div></div>
-      <div class="cell"><div class="m">Xmas trip</div><div class="p">$4,417</div></div>
-      <div class="cell"><div class="m">NYE trip</div><div class="p">$7,040</div></div>
+      <div class="cell"><div class="m">Nov 20–25</div><div class="p">$3,473</div></div>
+      <div class="cell best"><div class="m">Best · 17–22</div><div class="p">$3,020</div></div>
+      <div class="cell"><div class="m">Xmas</div><div class="p">$4,380</div></div>
+      <div class="cell"><div class="m">NYE</div><div class="p">$7,110</div></div>
     </div>
     <div class="traits2"><span class="t">Nonstop ✓</span><span class="t">Swimmable Médano ✓</span><span class="t">Walkable marina</span></div>
-    <div class="note">Same swimmable Cabo bay as Montage at a fraction of the price. November wins — March flights to Cabo jump to $1,261/pp.</div>
+    <div class="note">Same swimmable Cabo bay as Montage at a fraction of the price. The room barely moves week to week, so the <b>Nov 17–22 flight savings</b> alone knock it to ~$3,020 — the cheapest real option here.</div>
   </div>
 
   <!-- Conrad -->
@@ -194,20 +180,20 @@
     <span class="rank a">Closest to Montage</span>
     <div class="top">
       <div><div class="name"><a href="https://www.conradpuntademita.com/" target="_blank">Conrad Punta de Mita</a></div><div class="loc">Puerto Vallarta (PVR) · Riviera Nayarit · 🚗 ~40 min</div></div>
-      <div class="price"><div class="n">~$4,550</div><div class="w">trip · March</div></div>
+      <div class="price"><div class="n">~$4,330</div><div class="w">trip · Nov 17–22</div></div>
     </div>
     <div class="breakdown">
-      <div class="bd"><div class="l">🏨 Hotel (Mar)</div><div class="n">$2,100</div></div>
-      <div class="bd"><div class="l">✈️ Flights ×3</div><div class="n">$2,433</div></div>
+      <div class="bd"><div class="l">🏨 Hotel (Nov 17)</div><div class="n">$2,772</div></div>
+      <div class="bd"><div class="l">✈️ Flights ×3</div><div class="n">$1,554</div></div>
     </div>
     <div class="strip">
-      <div class="cell"><div class="m">Nov trip</div><div class="p">$5,469</div></div>
-      <div class="cell best"><div class="m">Mar trip</div><div class="p">$4,533</div></div>
-      <div class="cell"><div class="m">Xmas trip</div><div class="p">$8,067</div></div>
+      <div class="cell"><div class="m">Nov 20–25</div><div class="p">$5,469</div></div>
+      <div class="cell best"><div class="m">Best · 17–22</div><div class="p">$4,330</div></div>
+      <div class="cell"><div class="m">Xmas</div><div class="p">$8,067</div></div>
       <div class="cell"><div class="m">NYE</div><div class="p">Sold out</div></div>
     </div>
     <div class="traits2"><span class="t">Nonstop ✓</span><span class="t">Swimmable cove ✓</span><span class="t">Design-forward + kids club</span></div>
-    <div class="note">Closest to the Montage feel in budget — and the only contender that's <b>cheaper in March</b>: PV keeps low spring-break flights ($811) AND a lower room rate.</div>
+    <div class="note">Closest to the Montage feel in budget — design-forward, beachfront on a calm cove, with a kids' club. PV keeps the cheapest flights of any destination in the <b>Nov 17–22</b> window ($518/pp), so this beats its own Nov 20–25 and even a March trip.</div>
   </div>
 
   <!-- Fairmont -->
@@ -215,20 +201,20 @@
     <span class="rank b">Family value</span>
     <div class="top">
       <div><div class="name"><a href="https://www.fairmont.com/en/hotels/riviera-maya/fairmont-mayakoba.html" target="_blank">Fairmont Mayakoba</a></div><div class="loc">Cancún (CUN) · Riviera Maya · 🚗 ~42 min</div></div>
-      <div class="price"><div class="n">~$4,050</div><div class="w">trip · Nov</div></div>
+      <div class="price"><div class="n">~$3,020</div><div class="w">trip · Nov 17–22</div></div>
     </div>
     <div class="breakdown">
-      <div class="bd"><div class="l">🏨 Hotel (Nov)</div><div class="n">$1,653</div></div>
-      <div class="bd"><div class="l">✈️ Flights ×3</div><div class="n">$2,400</div></div>
+      <div class="bd"><div class="l">🏨 Hotel (Nov 17)</div><div class="n">$1,630</div></div>
+      <div class="bd"><div class="l">✈️ Flights ×3</div><div class="n">$1,389</div></div>
     </div>
     <div class="strip">
-      <div class="cell best"><div class="m">Nov trip</div><div class="p">$4,053</div></div>
-      <div class="cell"><div class="m">Mar trip</div><div class="p">$7,191</div></div>
-      <div class="cell"><div class="m">Xmas trip</div><div class="p">$7,695</div></div>
-      <div class="cell"><div class="m">NYE trip</div><div class="p">$11,630</div></div>
+      <div class="cell"><div class="m">Nov 20–25</div><div class="p">$4,053</div></div>
+      <div class="cell best"><div class="m">Best · 17–22</div><div class="p">$3,020</div></div>
+      <div class="cell"><div class="m">Xmas</div><div class="p">$7,695</div></div>
+      <div class="cell"><div class="m">NYE</div><div class="p">$11,630</div></div>
     </div>
     <div class="traits2"><span class="t">Nonstop ✓</span><span class="t">Swimmable ✓</span><span class="t">Family pool + water slide</span></div>
-    <div class="note">Lagoon resort with a kids' water slide, near Playa's 5th-Ave dining. <b>Book November</b> — March's spring-break Cancún flights ($1,355/pp) nearly double the trip.</div>
+    <div class="note">Lagoon resort with a kids' water slide, near Playa's 5th-Ave dining. The <b>Nov 17–22</b> window pairs Cancún's cheapest nonstops ($463/pp) with the low-season room — ties Corazón as the value leader at ~$3,020.</div>
   </div>
 
   <!-- Nizuc -->
@@ -236,64 +222,85 @@
     <span class="rank c">Refined pick</span>
     <div class="top">
       <div><div class="name"><a href="https://www.nizuc.com/" target="_blank">Nizuc Resort &amp; Spa</a></div><div class="loc">Cancún (CUN) · quiet south tip · 🚗 ~11 min</div></div>
-      <div class="price"><div class="n">~$5,560</div><div class="w">trip · Nov</div></div>
+      <div class="price"><div class="n">~$3,310</div><div class="w">trip · Nov 17–22</div></div>
     </div>
     <div class="breakdown">
-      <div class="bd"><div class="l">🏨 Hotel (Nov)</div><div class="n">$3,161</div></div>
-      <div class="bd"><div class="l">✈️ Flights ×3</div><div class="n">$2,400</div></div>
+      <div class="bd"><div class="l">🏨 Hotel (Nov 17)</div><div class="n">$1,920</div></div>
+      <div class="bd"><div class="l">✈️ Flights ×3</div><div class="n">$1,389</div></div>
     </div>
     <div class="strip">
-      <div class="cell best"><div class="m">Nov trip</div><div class="p">$5,561</div></div>
-      <div class="cell"><div class="m">Mar trip</div><div class="p">$6,791</div></div>
-      <div class="cell"><div class="m">Xmas trip</div><div class="p">$9,285</div></div>
-      <div class="cell"><div class="m">NYE trip</div><div class="p">$9,020</div></div>
+      <div class="cell"><div class="m">Nov 20–25</div><div class="p">$5,561</div></div>
+      <div class="cell best"><div class="m">Best · 17–22</div><div class="p">$3,310</div></div>
+      <div class="cell"><div class="m">Xmas</div><div class="p">$9,285</div></div>
+      <div class="cell"><div class="m">NYE</div><div class="p">$9,020</div></div>
     </div>
     <div class="traits2"><span class="t">Nonstop ✓</span><span class="t">Calm swimmable beach ✓</span><span class="t">Sleek, couples-leaning</span></div>
-    <div class="note">The design-y, refined pick (your wife liked the look), short 15-min transfer. Its March room is cheaper, but <b>spring-break Cancún flights make November the better-value trip</b>.</div>
+    <div class="note">The design-y, refined pick (your wife liked the look), short 15-min transfer. Shifting to <b>Nov 17–22</b> is huge here — both the room and the Cancún flights drop, cutting the trip from $5,561 to ~$3,310.</div>
   </div>
 
   <h2>More Cabo picks <span>— you asked me to add these</span></h2>
 
-  <!-- Park Hyatt -->
+  <!-- Hyatt Ziva -->
   <div class="card">
-    <span class="rank a">Newest luxe</span>
+    <span class="rank b">All-inclusive</span>
     <div class="top">
-      <div><div class="name"><a href="https://www.hyatt.com/park-hyatt/en-US/cabph-park-hyatt-cabo-del-sol" target="_blank">Park Hyatt Los Cabos</a></div><div class="loc">Cabo (SJD) · Cabo Del Sol · 🚗 ~32 min</div></div>
-      <div class="price"><div class="n">~$6,880</div><div class="w">trip · Nov</div></div>
+      <div><div class="name"><a href="https://www.hyatt.com/hyatt-ziva/en-US/sjdzs-hyatt-ziva-los-cabos" target="_blank">Hyatt Ziva Los Cabos</a></div><div class="loc">Cabo (SJD) · Zona Hotelera, San José · 🚗 ~20 min</div></div>
+      <div class="price"><div class="n">~$4,680</div><div class="w">trip · Nov 17–22</div></div>
     </div>
     <div class="breakdown">
-      <div class="bd"><div class="l">🏨 Hotel (Nov)</div><div class="n">$4,646</div></div>
-      <div class="bd"><div class="l">✈️ Flights ×3</div><div class="n">$2,238</div></div>
+      <div class="bd"><div class="l">🏨 All-incl (Nov 17)</div><div class="n">$2,888</div></div>
+      <div class="bd"><div class="l">✈️ Flights ×3</div><div class="n">$1,788</div></div>
     </div>
     <div class="strip">
-      <div class="cell best"><div class="m">Nov trip</div><div class="p">$6,880</div></div>
-      <div class="cell"><div class="m">Mar trip</div><div class="p">$14,500</div></div>
-      <div class="cell"><div class="m">Xmas trip</div><div class="p">$9,760</div></div>
-      <div class="cell"><div class="m">NYE trip*</div><div class="p">~$14,200</div></div>
+      <div class="cell"><div class="m">Nov 20–25</div><div class="p">$5,530</div></div>
+      <div class="cell best"><div class="m">Best · 17–22</div><div class="p">$4,680</div></div>
+      <div class="cell"><div class="m">Xmas</div><div class="p">$5,940</div></div>
+      <div class="cell"><div class="m">NYE</div><div class="p">$9,750</div></div>
     </div>
-    <div class="traits2"><span class="t">Nonstop ✓</span><span class="t">Newest luxe · 2024 ✓</span><span class="t">Cabo Del Sol beach</span></div>
-    <div class="note">The newest ultra-luxe resort in Cabo (opened 2024) — Montage-level polish on the calmer Cabo Del Sol corridor. It only fits budget in <b>November (~$6,880)</b>; the room jumps to $1,853/nt in March and $1,250/nt at Christmas, and New Year's week is higher still (~$14,200 est.), pushing those trips well past $8k.</div>
+    <div class="traits2"><span class="t">Nonstop ✓</span><span class="t">Family-friendly ✓</span><span class="t warn">All-inclusive, not à la carte</span><span class="t">~20 min transfer</span></div>
+    <div class="note">The one true <b>all-inclusive</b> here — meals, drinks and a kids' club all bundled in, on the closer San José side. 8.6/10, big pools and slides, very family-easy. It runs against your à-la-carte preference, and the Zona Hotelera beach is calm-but-ordinary (the pools are the draw). <span style="color:var(--muted);">Rate is for 2 adults; Riley's child all-inclusive fee is extra.</span></div>
   </div>
 
-  <!-- Zadún -->
-  <div class="card splurge">
-    <span class="rank c">Ritz Reserve</span>
+  <!-- The Cape -->
+  <div class="card">
+    <span class="rank c">Style pick</span>
     <div class="top">
-      <div><div class="name"><a href="https://www.ritzcarlton.com/en/hotels/sjdzr-zadun-los-cabos-a-ritz-carlton-reserve/overview/" target="_blank">Zadún, a Ritz-Carlton Reserve</a></div><div class="loc">Cabo (SJD) · Puerto Los Cabos · 🚗 ~20 min</div></div>
-      <div class="price"><div class="n">~$7,780</div><div class="w">trip · Nov</div></div>
+      <div><div class="name"><a href="https://www.hyatt.com/thompson-hotels/en-US/cslth-the-cape" target="_blank">The Cape, a Thompson Hotel</a></div><div class="loc">Cabo (SJD) · Cabo San Lucas corridor · 🚗 ~37 min</div></div>
+      <div class="price"><div class="n">~$6,360</div><div class="w">trip · Nov 20–25</div></div>
     </div>
     <div class="breakdown">
-      <div class="bd"><div class="l">🏨 Hotel (Nov)</div><div class="n">$5,545</div></div>
+      <div class="bd"><div class="l">🏨 Hotel (Nov)</div><div class="n">$4,124</div></div>
       <div class="bd"><div class="l">✈️ Flights ×3</div><div class="n">$2,238</div></div>
     </div>
     <div class="strip">
-      <div class="cell best"><div class="m">Nov trip</div><div class="p">$7,780</div></div>
-      <div class="cell"><div class="m">Mar trip</div><div class="p">$9,000</div></div>
-      <div class="cell"><div class="m">Xmas trip</div><div class="p">$11,450</div></div>
-      <div class="cell"><div class="m">NYE trip</div><div class="p">$24,540</div></div>
+      <div class="cell best"><div class="m">Nov 20–25</div><div class="p">$6,360</div></div>
+      <div class="cell"><div class="m">Nov 17–22</div><div class="p">$6,430</div></div>
+      <div class="cell"><div class="m">Xmas</div><div class="p">$6,200</div></div>
+      <div class="cell"><div class="m">NYE</div><div class="p">$11,000</div></div>
     </div>
-    <div class="traits2"><span class="t">Nonstop ✓</span><span class="t">Sea of Cortez beach + pools ✓</span><span class="t">Ultra-luxe · serene</span></div>
-    <div class="note">A Ritz-Carlton <i>Reserve</i> (their top tier) in quiet Puerto Los Cabos — serene, design-forward, 9.4/10, à la carte. Multiple pools and a calm Sea of Cortez beach; it welcomes families though it leans grown-up-serene. <b>Only November (~$7,780) sits at the top of your budget</b> — Christmas ($1,541/nt) and New Year's ($3,382/nt) send it well over.</div>
+    <div class="traits2"><span class="t">Two ocean pools ✓</span><span class="t">À la carte ✓</span><span class="t warn">Surf beach — not swimmable</span><span class="t warn">Couples-oriented</span></div>
+    <div class="note">Sleek, design-forward Thompson (now under Hyatt), 8.9/10 with two oceanfront pools and a great restaurant. <b>But two things clash with your must-haves:</b> it's a romantic/couples property — reviews call it "light on family-friendly fun" — and its Monument Beach is a surf break, so <b>you can't swim in the ocean</b> (pools only). Priced so you can see it; weaker family fit than the picks above. (Note: unusually flat pricing — shifting dates barely helps.)</div>
+  </div>
+
+  <!-- Nobu -->
+  <div class="card">
+    <span class="rank c">Nobu brand</span>
+    <div class="top">
+      <div><div class="name"><a href="https://www.nobuhotels.com/los-cabos/" target="_blank">Nobu Hotel Los Cabos</a></div><div class="loc">Cabo (SJD) · Diamante, Pacific side · 🚗 ~45 min</div></div>
+      <div class="price"><div class="n">~$4,420</div><div class="w">trip · Nov 17–22</div></div>
+    </div>
+    <div class="breakdown">
+      <div class="bd"><div class="l">🏨 Hotel (Nov 17)</div><div class="n">$2,633</div></div>
+      <div class="bd"><div class="l">✈️ Flights ×3</div><div class="n">$1,788</div></div>
+    </div>
+    <div class="strip">
+      <div class="cell"><div class="m">Nov 20–25</div><div class="p">$4,690</div></div>
+      <div class="cell best"><div class="m">Best · 17–22</div><div class="p">$4,420</div></div>
+      <div class="cell"><div class="m">Xmas</div><div class="p">$5,080</div></div>
+      <div class="cell"><div class="m">NYE</div><div class="p">$11,140</div></div>
+    </div>
+    <div class="traits2"><span class="t">Family-friendly ✓</span><span class="t">4 pools ✓</span><span class="t">À la carte ✓</span><span class="t warn">Pacific beach — not swimmable</span><span class="t warn">~45 min transfer</span></div>
+    <div class="note">Nobu-branded and genuinely family-friendly (Kizzu kids' club), with four pools including a swim-up bar. 8.6/10. <b>The catch:</b> it's out on the Pacific/Diamante side where ocean swimming is unsafe (strong currents, drop-offs) — the hotel itself says use the pools. Good pool-and-restaurant resort <i>if</i> a swimmable ocean isn't a dealbreaker; it's the farthest transfer here (~45 min).</div>
   </div>
 
   <h2>More like Conrad <span>— Puerto Vallarta / Riviera Nayarit</span></h2>
@@ -303,20 +310,20 @@
     <span class="rank a">Like Conrad</span>
     <div class="top">
       <div><div class="name"><a href="https://www.marriott.com/en-us/hotels/pvrwh-w-punta-de-mita/overview/" target="_blank">W Punta de Mita</a></div><div class="loc">Puerto Vallarta (PVR) · Punta de Mita · 🚗 ~40 min</div></div>
-      <div class="price"><div class="n">~$4,390</div><div class="w">trip · March</div></div>
+      <div class="price"><div class="n">~$3,600</div><div class="w">trip · Nov 17–22</div></div>
     </div>
     <div class="breakdown">
-      <div class="bd"><div class="l">🏨 Hotel (Mar)</div><div class="n">$1,955</div></div>
-      <div class="bd"><div class="l">✈️ Flights ×3</div><div class="n">$2,433</div></div>
+      <div class="bd"><div class="l">🏨 Hotel (Nov 17)</div><div class="n">$2,047</div></div>
+      <div class="bd"><div class="l">✈️ Flights ×3</div><div class="n">$1,554</div></div>
     </div>
     <div class="strip">
-      <div class="cell"><div class="m">Nov trip</div><div class="p">$4,840</div></div>
-      <div class="cell best"><div class="m">Mar trip</div><div class="p">$4,390</div></div>
-      <div class="cell"><div class="m">Xmas trip</div><div class="p">$5,050</div></div>
-      <div class="cell"><div class="m">NYE trip</div><div class="p">$8,430</div></div>
+      <div class="cell"><div class="m">Nov 20–25</div><div class="p">$4,840</div></div>
+      <div class="cell best"><div class="m">Best · 17–22</div><div class="p">$3,600</div></div>
+      <div class="cell"><div class="m">Xmas</div><div class="p">$5,050</div></div>
+      <div class="cell"><div class="m">NYE</div><div class="p">$8,430</div></div>
     </div>
     <div class="traits2"><span class="t">Nonstop ✓</span><span class="t">Calm El Anclote beach ✓</span><span class="t">Design-forward + kids' program</span></div>
-    <div class="note">The closest twin to Conrad — design-forward and beachfront on the sheltered El Anclote side (calm, swimmable), with a lively main pool and a children's program. 9.0/10. Like Conrad it dodges the spring-break flight spike, so <b>March is the value window (~$4,390)</b>. (It has a separate adults pool zone but is a full family resort.)</div>
+    <div class="note">The closest twin to Conrad — design-forward and beachfront on the sheltered El Anclote side (calm, swimmable), with a lively main pool and a children's program. 9.0/10. Same PV flight bargain, so <b>Nov 17–22 is the value window (~$3,600)</b>.</div>
   </div>
 
   <!-- Marriott Puerto Vallarta -->
@@ -324,20 +331,20 @@
     <span class="rank v">Value pick</span>
     <div class="top">
       <div><div class="name"><a href="https://www.marriott.com/en-us/hotels/pvrmx-marriott-puerto-vallarta-resort-and-spa/overview/" target="_blank">Marriott Puerto Vallarta</a></div><div class="loc">Puerto Vallarta (PVR) · Marina Vallarta · 🚗 ~10 min</div></div>
-      <div class="price"><div class="n">~$3,710</div><div class="w">trip · Nov</div></div>
+      <div class="price"><div class="n">~$2,570</div><div class="w">trip · Nov 17–22*</div></div>
     </div>
     <div class="breakdown">
-      <div class="bd"><div class="l">🏨 Hotel (Nov)</div><div class="n">$1,015</div></div>
-      <div class="bd"><div class="l">✈️ Flights ×3</div><div class="n">$2,697</div></div>
+      <div class="bd"><div class="l">🏨 Hotel (Nov)*</div><div class="n">$1,015</div></div>
+      <div class="bd"><div class="l">✈️ Flights ×3</div><div class="n">$1,554</div></div>
     </div>
     <div class="strip">
-      <div class="cell best"><div class="m">Nov trip</div><div class="p">$3,710</div></div>
-      <div class="cell"><div class="m">Mar trip*</div><div class="p">$3,590</div></div>
-      <div class="cell"><div class="m">Xmas trip*</div><div class="p">$4,410</div></div>
-      <div class="cell"><div class="m">NYE trip*</div><div class="p">$7,760</div></div>
+      <div class="cell"><div class="m">Nov 20–25</div><div class="p">$3,710</div></div>
+      <div class="cell best"><div class="m">Best · 17–22*</div><div class="p">$2,570</div></div>
+      <div class="cell"><div class="m">Xmas*</div><div class="p">$4,410</div></div>
+      <div class="cell"><div class="m">NYE*</div><div class="p">$7,760</div></div>
     </div>
     <div class="traits2"><span class="t">Nonstop ✓</span><span class="t">Calm Banderas Bay beach ✓</span><span class="t">Big pool + kids' pool · 10 min from airport</span></div>
-    <div class="note">The value pick — a well-run beachfront family resort on calm Banderas Bay with a big infinity pool, a kids' splash pool, and the <b>shortest airport transfer of any option here (~10 min)</b>. Roughly half Conrad's rate. 8.6/10. <span style="color:var(--muted);">*Only Nov is live; Mar/Xmas/NYE rooms estimated.</span></div>
+    <div class="note">The value pick — a well-run beachfront family resort on calm Banderas Bay with a big infinity pool, a kids' splash pool, and the <b>shortest airport transfer of any option here (~10 min)</b>. Roughly half Conrad's rate. 8.6/10. <span style="color:var(--muted);">*Only Nov 20–25 room is live; Best-Nov / Xmas / NYE rooms estimated.</span></div>
   </div>
 
   <!-- Four Seasons Punta Mita -->
@@ -345,20 +352,20 @@
     <span class="rank c">Dream splurge</span>
     <div class="top">
       <div><div class="name"><a href="https://www.fourseasons.com/puntamita/" target="_blank">Four Seasons Punta Mita</a></div><div class="loc">Puerto Vallarta (PVR) · Punta de Mita · 🚗 ~45 min</div></div>
-      <div class="price"><div class="n">~$9,960</div><div class="w">trip · Nov</div></div>
+      <div class="price"><div class="n">~$6,170</div><div class="w">trip · Nov 17–22</div></div>
     </div>
     <div class="breakdown">
-      <div class="bd"><div class="l">🏨 Hotel (Nov)</div><div class="n">$7,267</div></div>
-      <div class="bd"><div class="l">✈️ Flights ×3</div><div class="n">$2,697</div></div>
+      <div class="bd"><div class="l">🏨 Hotel (Nov 17)</div><div class="n">$4,617</div></div>
+      <div class="bd"><div class="l">✈️ Flights ×3</div><div class="n">$1,554</div></div>
     </div>
     <div class="strip">
-      <div class="cell best"><div class="m">Nov trip</div><div class="p">$9,960</div></div>
-      <div class="cell"><div class="m">Mar trip</div><div class="p">$11,550</div></div>
-      <div class="cell"><div class="m">Xmas trip</div><div class="p">$13,080</div></div>
-      <div class="cell"><div class="m">NYE trip</div><div class="p">$23,720</div></div>
+      <div class="cell"><div class="m">Nov 20–25</div><div class="p">$9,960</div></div>
+      <div class="cell best"><div class="m">Best · 17–22</div><div class="p">$6,170</div></div>
+      <div class="cell"><div class="m">Xmas</div><div class="p">$13,080</div></div>
+      <div class="cell"><div class="m">NYE</div><div class="p">$23,720</div></div>
     </div>
     <div class="traits2"><span class="t">Nonstop ✓</span><span class="t">Calm swimmable cove ✓</span><span class="t">Best kids' program in the region</span></div>
-    <div class="note">The region's gold standard for family luxury — a legendary calm cove, the KidsWell club, and multiple pools. À la carte, but the room alone runs <b>$1,250–3,150/nt</b>, so every window lands well over budget. The aspirational pick.</div>
+    <div class="note">The region's gold standard for family luxury — a legendary calm cove, the KidsWell club, and multiple pools. À la carte. The <b>Nov 17–22</b> window pulls it all the way down to ~$6,170 (from ~$9,960) — the only window it even flirts with budget. The aspirational pick.</div>
   </div>
 
   <h2 style="color:var(--coral);">Splurge tier <span>— over budget, for reference</span></h2>
@@ -376,29 +383,31 @@
   <h2>Ruled out <span>— for the record</span></h2>
   <div class="card">
     <div class="traits2" style="margin-top:2px;">
+      <span class="t warn">Park Hyatt Los Cabos — cockroach reviews + photos</span>
+      <span class="t warn">Zadún (Ritz Reserve) — cockroach reviews</span>
+      <span class="t warn">Garza Blanca Los Cabos — weak reviews + Pacific beach not swimmable</span>
       <span class="t warn">Andaz Costa Rica — airfare too high, no easy nonstop</span>
       <span class="t warn">Conrad Tulum — long transfer, not really Tulum</span>
       <span class="t warn">ME Cabo &amp; Alila Mayakoba — adults-only</span>
       <span class="t warn">La Paz — no nonstop (9–25h)</span>
       <span class="t warn">Canary Islands — no nonstop from ORD</span>
-      <span class="t warn">Garza Blanca Los Cabos — weak reviews + Pacific beach not swimmable</span>
     </div>
   </div>
 
   <h2>Where it lands</h2>
   <div class="verdict">
     <h3>The honest read</h3>
-    <p>Every contender is nonstop, swimmable and family-friendly — and saves <b>~$3,500–5,600 vs Montage</b> (live Montage Nov ~$9,040).</p>
-    <p><b>Cheapest:</b> Corazón Cabo, Nov — <b>~$3,500</b>. Same swimmable Cabo bay, tiny price.</p>
-    <p><b>Closest to Montage vibe:</b> Conrad Punta de Mita, March — <b>~$4,550</b> (and PV dodges the spring-break flight spike).</p>
-    <p><b>New flight insight:</b> for Cancún &amp; Cabo, <b>November beats March</b> once you count airfare — spring break jacks those fares up ~$500/person. Only Puerto Vallarta stays cheap in March.</p>
-    <p><b>Is New Year's week (Dec 26–31) better? No —</b> it's the priciest of all four. Nonstops roughly double ($1,642–1,813/pp), <b>Montage &amp; Conrad are already sold out</b>, and rooms add a holiday premium. Even the cheapest, Corazón, jumps to <b>~$7,040</b> (vs ~$3,500 in November).</p>
-    <p><b>Like Conrad? Look at Puerto Vallarta.</b> <b>W Punta de Mita</b> is its value twin (~$4,390 in March, same calm bay + design vibe), <b>Marriott PV</b> is the cheapest and closest to the airport (~$3,600, 10-min transfer), and <b>Four Seasons</b> is the dream if budget opens up. PV also dodges the spring-break flight spike, so March stays cheap here.</p>
-    <p style="color:#8fe0c4;margin-top:12px;">Point me at your top 1–2 and I'll lock exact bookable flights + room for your dates.</p>
+    <p><b>The single biggest lever isn't the hotel — it's the dates.</b> Shifting the November week a few days earlier, to <b>Nov 17–22</b>, cuts the O'Hare nonstops ~$150–380/person and often the room too. It beats both the Nov 20–25 baseline and a March trip for every destination.</p>
+    <p><b>Cheapest:</b> Corazón Cabo &amp; Fairmont Mayakoba tie at <b>~$3,020</b> (Nov 17–22) — both swimmable, both nonstop.</p>
+    <p><b>Closest to Montage vibe:</b> Conrad Punta de Mita, <b>~$4,330</b> (Nov 17–22) — design-forward, calm cove, kids' club.</p>
+    <p><b>Your wife's Montage point checks out:</b> in the Nov 17–22 window the Montage room is ~$914/night and the whole trip is <b>~$7,090</b>, not ~$9,040. Still the priciest of the swimmable picks, but much closer.</p>
+    <p><b>On the three you asked me to add:</b> <b>Hyatt Ziva</b> is the easy all-inclusive family play (~$4,680) but not à la carte. <b>The Cape</b> and <b>Nobu</b> are gorgeous, but both sit on <b>non-swimmable surf/Pacific beaches</b> — and The Cape is couples-oriented — so they fight your "pool AND swimmable ocean, family-friendly" brief. Priced anyway so you can judge.</p>
+    <p><b>Is New Year's week (Dec 26–31) better? No —</b> it's the priciest window of all: nonstops roughly double, Montage &amp; Conrad are sold out, and rooms carry a holiday premium.</p>
+    <p style="color:#8fe0c4;margin-top:12px;">Point me at your top 1–2 and I'll lock exact bookable flights + room for your dates. Want me to test even more November windows (e.g. Nov 15–20, 18–23) to squeeze the date lever further?</p>
   </div>
 
   <footer>
-    Live prices Jul 2026 (Kayak). Hotel = cheapest available room, 5 nights incl. taxes &amp; fees. Flights = cheapest nonstop economy, round-trip/person ×3 (all live). NYE = Dec 26–31. Drive times = Google Maps, airport → hotel. <b>*</b> Estimated rooms (all other cells live): Park Hyatt NYE and Marriott PV Mar/Xmas/NYE. Fares &amp; rates move daily.
+    Live prices Jul 2026 (Kayak). Hotel = cheapest available room, 5 nights incl. taxes &amp; fees. Flights = cheapest nonstop economy, round-trip/person ×3 (all live). <b>Best Nov</b> = cheapest 5-night window within a few days of Nov 20 — windows compared: Nov 17–22, 20–25, 22–27 (Nov 17–22 won across the board; 22–27 is a pricey Friday return). Drive times = Google Maps, airport → hotel. <b>*</b> Estimated rooms (all other cells live): Marriott PV Best-Nov / Xmas / NYE. Fares &amp; rates move daily.
   </footer>
 
 </div>
